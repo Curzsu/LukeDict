@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:scrollbarStyle="outsideInset" >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dip" >
+
+        <TextView
+            android:id="@+id/tv_qq"
+            android:layout_width="57dp"
+            android:layout_height="40dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginBottom="5dip"
+            android:gravity="center_vertical|right"
+            android:text="QQ:"
+            android:textSize="16sp" />
+        <EditText android:id="@+id/et_qqnumber"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:hint="请输入你的QQ号："
+            android:inputType="number"
+            android:paddingLeft="20dip"/>
+        <TextView android:id="@+id/tv_age"
+            android:layout_width="80dip"
+            android:layout_height="40dip"
+            android:gravity="center_vertical|right"
+            android:layout_marginRight="5dip"
+            android:layout_marginBottom="5dip"
+            android:textSize="16sp"
+            android:text="年龄："      />
+        <EditText android:id="@+id/et_age"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:hint="请输入年龄:"
+            android:paddingLeft="20dip"
+            android:maxLength="3"
+            android:inputType="number"      />
+        <TextView android:id="@+id/tv_sex_text"
+            android:layout_width="80dip"
+            android:layout_height="40dip"
+            android:gravity="center_vertical|right"
+            android:layout_marginRight="5dip"
+            android:layout_marginBottom="5dip"
+            android:text="性别："
+            android:textSize="16sp"      />
+        <RadioGroup
+            android:id="@+id/rg_sex"
+            android:layout_width="300dp"
+            android:layout_height="40dip"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@id/tv_sex_text"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv_sex_text"         >
+            <RadioButton
+                android:id="@+id/rb_sex_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="男"
+                android:textSize="16sp"        />
+            <RadioButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="女"
+                android:id="@+id/rb_sex_female"
+                android:layout_weight="1"
+                android:textSize="16sp">
+            </RadioButton>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="258dp"
+            android:layout_height="40dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginBottom="5dip"
+            android:gravity="center_vertical|right"
+            android:text="你觉得本APP体验感如何？(多选)"
+            android:textSize="16sp" />
+        <CheckBox    android:id="@+id/box1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rg_sex"
+            android:text="很好"
+               ></CheckBox>
+        <CheckBox    android:id="@+id/box2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:text="特别棒">
+
+        </CheckBox>
+        <CheckBox     android:id="@+id/box3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="优秀">
+        </CheckBox>
+        <TextView android:id="@+id/tv_phone_text"
+            android:layout_width="80dip"
+            android:layout_height="40dip"
+            android:gravity="center_vertical|right"
+            android:layout_marginRight="5dip"
+            android:layout_marginBottom="5dip"
+            android:textSize="16sp"
+            android:text="联系电话："     />
+        <EditText android:id="@+id/et_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:hint="请输入手机号:"
+            android:paddingLeft="20dip"
+            android:inputType="phone"
+            android:maxLength="11"     />
+
+        <Button android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重置"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/lightgrey">
+        </Button>
+        <Button android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/grey">
+        </Button>
+
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="236dp"
+            android:layout_height="40dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginBottom="5dip"
+            android:gravity="center_vertical|right"
+            android:text="请对本APP进行一个综合评价："
+            android:textSize="16sp" />
+        <RatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:progressBackgroundTint="@color/grey"
+            android:progressTint="@color/yellow"
+            android:numStars="5"
+            android:rating="1.5"/>
+
+    </LinearLayout>
+</ScrollView>

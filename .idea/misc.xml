@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android/LukeDict/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.12447916666666667" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/drawable/info_et_bg.xml" value="0.12447916666666667" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/drawable/item_gridbg.xml" value="0.14537037037037037" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_about.xml" value="0.3333333333333333" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_chat.xml" value="0.1" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_feedback.xml" value="0.22" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_home.xml" value="0.14855072463768115" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_homepage.xml" value="0.22" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_login_page.xml" value="0.22053231939163498" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_main_menu.xml" value="0.14666666666666667" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_read.xml" value="0.2875" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_reading_desc.xml" value="0.1015625" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_reading_grid.xml" value="0.22" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_reading_utils.xml" value="0.13802083333333334" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_search.xml" value="0.2062937062937063" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_show_student.xml" value="0.1331521739130435" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_user.xml" value="0.12447916666666667" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/activity_word_desc.xml" value="0.12447916666666667" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/first_fragment.xml" value="0.13541666666666666" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/item_abouttv.xml" value="0.15104166666666666" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/item_infolist_lv.xml" value="0.16666666666666666" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/item_readinggrid.xml" value="0.13802083333333334" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/msg_item.xml" value="0.22" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/layout/second_fragment.xml" value="0.125" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3333333333333333" />
+        <entry key="..\:/Android/LukeDict/app/src/main/res/menu/menu.xml" value="0.3333333333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

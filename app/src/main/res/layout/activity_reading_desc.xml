@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="readinggrid.ReadingDescActivity">
+<LinearLayout
+    android:id="@+id/readingdesc_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/yellow"
+        android:layout_height="60dp">
+
+    </RelativeLayout>-->
+<ImageView
+    android:id="@+id/readingdesc_iv_bigpic"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:src="@mipmap/i1"
+    android:layout_margin="20sp"
+    android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/readingdesc_tv_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="因为爱情"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/readingdesc_tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="11111111111111"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        android:textSize="16sp"/>
+</LinearLayout>
+</ScrollView>

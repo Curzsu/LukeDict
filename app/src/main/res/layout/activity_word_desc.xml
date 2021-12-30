@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".WordDescActivity">
+    <LinearLayout
+        android:id="@+id/worddesc_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <TextView
+         android:id="@+id/worddesc_tv_title"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="hello"
+         android:textColor="@color/black"
+         android:textStyle="bold"
+         android:layout_gravity="center"
+         android:textSize="50sp"/>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:text="单词详解"
+    android:textColor="@color/white"
+    android:textSize="25sp"
+android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/worddesc_tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="111111111111111"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_margin="20dp"/>
+    </LinearLayout>
+
+</ScrollView>

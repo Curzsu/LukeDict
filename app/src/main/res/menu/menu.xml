@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/firstFragment"
+        android:icon="@drawable/book"
+        android:title="功能1" />
+    <item
+        android:id="@+id/secondFragment"
+        android:icon="@drawable/home"
+        android:title="功能2" />
+    <item
+        android:id="@+id/thirdFragment"
+        android:icon="@drawable/user"
+        android:title="功能3" />
+</menu>
