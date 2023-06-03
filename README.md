@@ -1,4 +1,7 @@
 # LukeDict
+
+![Chocolatey](https://img.shields.io/chocolatey/dt/LukeDict?style=flat-square)
+
 这是我的第一个个人项目，做了将近两个月(个人水平有限_(:з」∠)_)
 
 这个项目是我学校的Android课布置的期末作业。
