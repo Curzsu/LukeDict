@@ -2,6 +2,7 @@
 
 ![](https://img.shields.io/badge/Android-studio-brightgreen) 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Curzsu/LukeDict?style=flat-square)
+![AUR license](https://img.shields.io/aur/license/android-studio)
 
 这是我的第一个个人项目，做了将近两个月(个人水平有限_(:з」∠)_)
 
