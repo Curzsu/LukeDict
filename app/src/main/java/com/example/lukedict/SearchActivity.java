@@ -17,28 +17,35 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchActivity extends AppCompatActivity implements View.OnClickListener{
-EditText searchEt;
-ImageView searchIv,flushIv;
-ListView showlv;
-//ListView内部数据源
-    List<WordBean>mDatas;
+public class SearchActivity extends AppCompatActivity implements View.OnClickListener {
+
+    EditText searchEt;
+    ImageView searchIv, flushIv;
+    ListView showlv;
+
+    //ListView内部数据源
+    List<WordBean> mDatas;
     //全部的数据
-    List<WordBean>allWordList;
-private InfoListAdapter adapter;
+    List<WordBean> allWordList;
+    private InfoListAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
         showactionbar();
         initview();
+
         //找到ListView对应的数据源
         mDatas = new ArrayList<>();
         allWordList = SearchUtils.getAllWordLists();
         mDatas.addAll(allWordList);
+
         //创建适配器  BaseAdapter的子类
-    adapter = new InfoListAdapter(this,mDatas);
-    showlv.setAdapter(adapter);      //设置适配器
+        adapter = new InfoListAdapter(this,mDatas);
+        showlv.setAdapter(adapter);      //设置适配器
+
         //设置单项点击监听功能
         setListener();
     }
@@ -81,31 +88,31 @@ private InfoListAdapter adapter;
 
     @Override
     public void onClick(View v) {
-switch (v.getId()){
-    case R.id.info_iv_flush://刷新点击
-        searchEt.setText("");
-mDatas.clear();
-mDatas.addAll(allWordList);
-adapter.notifyDataSetChanged();
-        break;
-    case R.id.info_iv_search:
-        String msg = searchEt.getText().toString().trim();    //获取输入的信息
-        if(TextUtils.isEmpty(msg)){
-            Toast.makeText(this,"输入内容不能为空",Toast.LENGTH_SHORT).show();
-            return;
+        switch (v.getId()){
+            case R.id.info_iv_flush://刷新点击
+                searchEt.setText("");
+                mDatas.clear();
+                mDatas.addAll(allWordList);
+                adapter.notifyDataSetChanged();
+                break;
+            case R.id.info_iv_search:
+                String msg = searchEt.getText().toString().trim();    //获取输入的信息
+                if(TextUtils.isEmpty(msg)){
+                    Toast.makeText(this,"输入内容不能为空",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                //查看输入内容是否在list当中存在，如果存在，就加到一个新的集合里
+                List<WordBean>list = new ArrayList<>();
+                for(int i = 0; i < allWordList.size(); i++){
+                    String title = allWordList.get(i).getTitle();
+                    if(title.startsWith(msg)){    //如果包含以msg作为开头，就添加到这个集合当中
+                        list.add(allWordList.get(i));
+                    }
+                }
+                mDatas.clear();      //清空listview的适配器数据源内容
+                mDatas.addAll(list);     //添加新的数据到数据源中
+                adapter.notifyDataSetChanged();   //提示适配器更新
+                break;
         }
-        //查看输入内容是否在list当中存在，如果存在，就加到一个新的集合里
-        List<WordBean>list = new ArrayList<>();
-        for(int i = 0; i < allWordList.size(); i++){
-            String title = allWordList.get(i).getTitle();
-            if(title.startsWith(msg)){    //如果包含以msg作为开头，就添加到这个集合当中
-                list.add(allWordList.get(i));
-            }
-            mDatas.clear();      //清空listview的适配器数据源内容
-            mDatas.addAll(list);     //添加新的数据到数据源中
-            adapter.notifyDataSetChanged();   //提示适配器更新
-        }
-        break;
-}
     }
 }

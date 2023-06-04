@@ -3,13 +3,11 @@ package com.example.lukedict;
 import java.io.Serializable;
 
 public class ReadingBean implements Serializable {
-private String title;
-private String desc;
-private int picId;
+    private String title;
+    private String desc;
+    private int picId;
 
-
-    public ReadingBean() {
-    }
+    public ReadingBean() {}
 
     public String getTitle() {
         return title;

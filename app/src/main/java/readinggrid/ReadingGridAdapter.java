@@ -27,7 +27,6 @@ public class ReadingGridAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-
         return mDatas.size();
     }
 
@@ -45,24 +44,28 @@ public class ReadingGridAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         //声明Viewholder
         ViewHolder holder = null;
-if(convertView == null){//判断是否有复用的view,如果没有就创建
-    convertView = LayoutInflater.from(context).inflate(R.layout.item_readinggrid,null);
-    holder = new ViewHolder(convertView);
-    convertView.setTag(holder);
-}else{
-    holder = (ViewHolder) convertView.getTag();
-}
-//获取指定位置数据
+
+        if (convertView == null) {//判断是否有复用的view,如果没有就创建
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_readinggrid,null);
+            holder = new ViewHolder(convertView);
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
+        }
+
+        //获取指定位置数据
         ReadingBean readingBean = mDatas.get(position);
-holder.iv.setImageResource(readingBean.getPicId());
-holder.tv.setText(readingBean.getTitle());
+        holder.iv.setImageResource(readingBean.getPicId());
+        holder.tv.setText(readingBean.getTitle());
 
         return convertView;
     }
-    class ViewHolder{
+
+    class ViewHolder {
         ImageView iv;
         TextView tv;
-        public ViewHolder(View view){
+
+        public ViewHolder(View view) {
             iv = view.findViewById(R.id.item_grid_iv);
             tv = view.findViewById(R.id.item_grid_tv);
         }

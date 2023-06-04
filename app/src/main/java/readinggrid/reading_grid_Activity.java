@@ -22,10 +22,11 @@ import java.util.concurrent.LinkedTransferQueue;
 
 public class reading_grid_Activity extends AppCompatActivity {
     GridView gv;
-List<ReadingBean>mDatas;
-private ReadingGridAdapter adapter;
+    List<ReadingBean> mDatas;
+    private ReadingGridAdapter adapter;
+
     /**
-     * hide action bar
+     * Hide action bar
      */
     private void hideActionBar() {
         // Hide UI
@@ -34,12 +35,14 @@ private ReadingGridAdapter adapter;
             actionBar.hide();
         }
     }
+
     /**
-     * set the activity display in full screen
+     * Set the activity display in full screen
      */
     private void setFullScreen() {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,32 +56,34 @@ private ReadingGridAdapter adapter;
         //数据源
         mDatas = ReadingUtils.getAllReadingList();
         //创建适配器
-adapter = new ReadingGridAdapter(this,mDatas);
-//设置适配器
+        adapter = new ReadingGridAdapter(this, mDatas);
+        //设置适配器
         gv.setAdapter(adapter);
         setListener();
     }
+
     public boolean onOptionsItemSelected(MenuItem item) {//定义actionbar上的返回箭头
-        if(item.getItemId() == android.R.id.home)
-        {
+        if (item.getItemId() == android.R.id.home) {
             finish();
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
-    private void setListener(){
+
+    private void setListener() {
         gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ReadingBean readingBean = mDatas.get(position);
-                Intent intent = new Intent(reading_grid_Activity.this,ReadingDescActivity.class);
-                intent.putExtra("reading",readingBean);    //注意，这里得先让ReadingBean实现Serializable接口
+                Intent intent = new Intent(reading_grid_Activity.this, ReadingDescActivity.class);
+                intent.putExtra("reading", readingBean);    //注意，这里得先让ReadingBean实现Serializable接口
                 //必须实现序列化才能使用，否则会报错
                 startActivity(intent);
             }
         });
 
     }
+
    /* public boolean onOptionsItemSelected(MenuItem item) {//定义actionbar上的返回箭头
         if(item.getItemId() == android.R.id.home)
         {

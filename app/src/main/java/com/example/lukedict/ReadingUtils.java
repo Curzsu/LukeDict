@@ -90,11 +90,11 @@ public class ReadingUtils {
             "  My parents, of course, I have to tell you, didn’t understand my dreams at all. They were always wondering. They said, “What is he doing? When are you going to get a job, a real job? When are you going to make money?” And all of those questions I got. And they said, “I hope we didn’t raise a bum, someone that doesn’t make money and just wants to live in a gymnasium and think about their bodies.” Well, I endured all of this negative thinking, and the more negative the thinking got, and the more negative the questions got, the stronger and the more positive I became, the stronger I became inside."
     };
     public static List<ReadingBean> getAllReadingList(){
-List<ReadingBean> list = new ArrayList<>();
-for(int i = 0; i < readingtitle.length; i++){
-ReadingBean bean = new ReadingBean(readingtitle[i],content[i],resId[i]);
-list.add(bean);
-}
-return list;
+        List<ReadingBean> list = new ArrayList<>();
+        for(int i = 0; i < readingtitle.length; i++){
+            ReadingBean bean = new ReadingBean(readingtitle[i],content[i],resId[i]);
+            list.add(bean);
+        }
+    return list;
     }
 }

@@ -37,6 +37,5 @@ public class WordBean implements Serializable {
         this.desc = desc;
     }
 
-    public WordBean() {
-    }
+    public WordBean() {}
 }

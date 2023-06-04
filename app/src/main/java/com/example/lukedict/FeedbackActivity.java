@@ -30,17 +30,17 @@ import android.widget.Toast;
 import java.io.File;
 
 public class FeedbackActivity extends AppCompatActivity implements View.OnClickListener{
-RatingBar rating;
-Button sendbtn;
-Button resetbtn;
-EditText qq;
-EditText age;
-RadioButton male;
-RadioButton female;
-CheckBox feedback1;
-CheckBox feedback2;
-CheckBox feedback3;
-EditText tel;
+    RatingBar rating;
+    Button sendbtn;
+    Button resetbtn;
+    EditText qq;
+    EditText age;
+    RadioButton male;
+    RadioButton female;
+    CheckBox feedback1;
+    CheckBox feedback2;
+    CheckBox feedback3;
+    EditText tel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +79,6 @@ EditText tel;
         rating.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                //当发生改变时输出评分
                 Toast.makeText(FeedbackActivity.this,"获得评分：" + String.valueOf(rating),
                         Toast.LENGTH_SHORT).show();
             }
@@ -87,12 +86,12 @@ EditText tel;
     }
 
     private void showactionbar() {
-        ActionBar actionBar = this.getSupportActionBar();//定义actionbar上的返回箭头
+        ActionBar actionBar = this.getSupportActionBar();
         actionBar.setTitle("问卷调查");
         actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
-    public boolean onOptionsItemSelected(MenuItem item) {//定义actionbar上的返回箭头
+    public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == android.R.id.home)
         {
             finish();
@@ -103,23 +102,16 @@ EditText tel;
 
     @Override
     public void onClick(View v) {
-
         switch (v.getId()){
             case R.id.btn_reset:
                 resetEverything();
-
-            break;
+                break;
 
             case R.id.btn_send:
                 showAlert();
-                //showAlert2();
-                 break;
+                break;
         }
     }
-
-  //  private void showNotification() {
-
-
 
     private void resetEverything() {
         qq.setText("");
@@ -136,7 +128,6 @@ EditText tel;
         AlertDialog alertDlg = new AlertDialog.Builder(FeedbackActivity.this).create();
         alertDlg.setTitle("友情提示");
         alertDlg.setMessage(Html.fromHtml("<font color=\"red\">确认提交问卷？</font>"));
-        //alertDlg.setMessage("确认提交问卷？");
         alertDlg.setButton(DialogInterface.BUTTON_NEGATIVE, "取消", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -156,12 +147,10 @@ EditText tel;
 
     private void showAlert2() {
         AlertDialog.Builder alertdialogbuilder = new AlertDialog.Builder(this);
-                alertdialogbuilder.setMessage("您确认要退出程序");
-                alertdialogbuilder.setPositiveButton("确定", null);
-                alertdialogbuilder.setNeutralButton("取消", null);
-                final AlertDialog alertdialog1 = alertdialogbuilder.create();
-                alertdialog1.show();
+        alertdialogbuilder.setMessage("您确认要退出程序");
+        alertdialogbuilder.setPositiveButton("确定", null);
+        alertdialogbuilder.setNeutralButton("取消", null);
+        final AlertDialog alertdialog1 = alertdialogbuilder.create();
+        alertdialog1.show();
     }
-
-
 }

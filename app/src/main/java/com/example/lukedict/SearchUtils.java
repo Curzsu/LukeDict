@@ -104,12 +104,11 @@ private static final String[] trans = {
     };
 
     public static List<WordBean> getAllWordLists(){
-List<WordBean>list = new ArrayList<>();   //创建这个集合
+        List<WordBean>list = new ArrayList<>();   //创建这个集合
         for (int i = 0; i < word.length; i++) {
-WordBean bean = new WordBean(word[i],trans[i],summary[i]);
-    list.add(bean);    //将数据添加到集合当中
+            WordBean bean = new WordBean(word[i],trans[i],summary[i]);
+            list.add(bean);    //将数据添加到集合当中
         }
         return list;
     }
-
 }
