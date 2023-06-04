@@ -19,11 +19,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class ChatActivity extends AppCompatActivity {
-private List<Msg> msgList = new ArrayList<>();
-private EditText inputText;
-private Button send;
-private RecyclerView msgRecyclerView;
-private MsgAdapter adapter;
+    private List<Msg> msgList = new ArrayList<>();
+    private EditText inputText;
+    private Button send;
+    private RecyclerView msgRecyclerView;
+    private MsgAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,15 +69,18 @@ private MsgAdapter adapter;
         }
         return super.onOptionsItemSelected(item);
     }
+
     public class Msg{
         public static final int TYPE_RECEIVED = 0;
         public static final int TYPE_SENT = 1;
         private String content;
         private int type;
+
         public Msg(String content, int type){
             this.content = content;
             this.type = type;
         }
+
         public String getContent(){
             return content;
         }
@@ -86,7 +89,6 @@ private MsgAdapter adapter;
             return type;
         }
     }
-
 
     private  void initMsgs(){
         Msg msg1 = new Msg("你好！",Msg.TYPE_RECEIVED);

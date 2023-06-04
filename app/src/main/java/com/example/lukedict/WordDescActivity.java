@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 public class WordDescActivity extends AppCompatActivity {
-TextView titleTv1,descTv;
+    TextView titleTv1,descTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +20,16 @@ TextView titleTv1,descTv;
         //接受上一界面传来的数据
         Intent intent = getIntent();
         WordBean wordBean = (WordBean) intent.getSerializableExtra("word");
-//设置显示控件
+        //设置显示控件
         titleTv1.setText(wordBean.getTitle());
         descTv.setText(wordBean.getDesc());
     }
 
     private void initView() {
-    titleTv1 = findViewById(R.id.worddesc_tv_title);
-    descTv = findViewById(R.id.worddesc_tv_desc);
+        titleTv1 = findViewById(R.id.worddesc_tv_title);
+        descTv = findViewById(R.id.worddesc_tv_desc);
     }
+
     private void showactionbar() {
         ActionBar actionBar = this.getSupportActionBar();//定义actionbar上的返回箭头
         actionBar.setTitle("单词搜索");

@@ -12,9 +12,8 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
-TextView tv;
-int time = 5;         //设置启动动画的时长
+    TextView tv;
+    int time = 5;         //设置启动动画的时长
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +23,7 @@ int time = 5;         //设置启动动画的时长
         tv = findViewById(R.id.main_tv);
         handler.sendEmptyMessageDelayed(1,1000);
     }
+
     /**
      * hide action bar
      */
@@ -34,13 +34,15 @@ int time = 5;         //设置启动动画的时长
             actionBar.hide();
         }
     }
+
     /**
      * set the activity display in full screen
      */
     private void setFullScreen() {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
-Handler handler = new Handler(){
+
+    Handler handler = new Handler(){
     @Override
     public void handleMessage( Message msg) {
         if(msg.what == 1){

@@ -31,7 +31,4 @@ public class ReadActivity extends AppCompatActivity {
             return imageId;
         }
     }
-
-
-
 }

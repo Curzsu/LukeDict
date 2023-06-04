@@ -7,12 +7,14 @@ public class ReadingUtils {
     private static final String[] readingtitle = {
             "Youth","Times","Diligent","Diamond","Gorgeous","Missing","Lover","Expect","Value","Affection"
     };
+
     private static final int[] resId = {
             R.mipmap.i1,R.mipmap.i2,R.mipmap.i3,R.mipmap.i4,R.mipmap.i5,R.mipmap.i6,
             R.mipmap.i7,R.mipmap.i8,R.mipmap.i9,R.mipmap.i10,
     };
+
     private static final String[] content = {
-"Youth\n" +
+    "Youth\n" +
         "\n" +
         "  Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life.\n" +
         "\n" +
@@ -89,12 +91,13 @@ public class ReadingUtils {
             "  If you think you're not going to be able \"get there,\" think again. There are many people who are worse off and have overcome bigger obstacles than what you are facing. Take, for example, Olympic sprinter Oscar Pistorius, an amputee who overcame his handicap to compete in the Olympics against his able-bodied peers. Everything is within your reach as long as you work hard and have a a positive attitude.",
             "  My parents, of course, I have to tell you, didn’t understand my dreams at all. They were always wondering. They said, “What is he doing? When are you going to get a job, a real job? When are you going to make money?” And all of those questions I got. And they said, “I hope we didn’t raise a bum, someone that doesn’t make money and just wants to live in a gymnasium and think about their bodies.” Well, I endured all of this negative thinking, and the more negative the thinking got, and the more negative the questions got, the stronger and the more positive I became, the stronger I became inside."
     };
+
     public static List<ReadingBean> getAllReadingList(){
-List<ReadingBean> list = new ArrayList<>();
-for(int i = 0; i < readingtitle.length; i++){
-ReadingBean bean = new ReadingBean(readingtitle[i],content[i],resId[i]);
-list.add(bean);
-}
-return list;
+    List<ReadingBean> list = new ArrayList<>();
+        for(int i = 0; i < readingtitle.length; i++){
+            ReadingBean bean = new ReadingBean(readingtitle[i],content[i],resId[i]);
+            list.add(bean);
+        }
+    return list;
     }
 }

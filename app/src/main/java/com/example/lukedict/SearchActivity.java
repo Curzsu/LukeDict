@@ -18,14 +18,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchActivity extends AppCompatActivity implements View.OnClickListener{
-EditText searchEt;
-ImageView searchIv,flushIv;
-ListView showlv;
-//ListView内部数据源
+    EditText searchEt;
+    ImageView searchIv,flushIv;
+    ListView showlv;
+    //ListView内部数据源
     List<WordBean>mDatas;
     //全部的数据
     List<WordBean>allWordList;
-private InfoListAdapter adapter;
+    private InfoListAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,8 +38,8 @@ private InfoListAdapter adapter;
         allWordList = SearchUtils.getAllWordLists();
         mDatas.addAll(allWordList);
         //创建适配器  BaseAdapter的子类
-    adapter = new InfoListAdapter(this,mDatas);
-    showlv.setAdapter(adapter);      //设置适配器
+        adapter = new InfoListAdapter(this,mDatas);
+        showlv.setAdapter(adapter);      //设置适配器
         //设置单项点击监听功能
         setListener();
     }
@@ -81,19 +82,19 @@ private InfoListAdapter adapter;
 
     @Override
     public void onClick(View v) {
-switch (v.getId()){
-    case R.id.info_iv_flush://刷新点击
-        searchEt.setText("");
-mDatas.clear();
-mDatas.addAll(allWordList);
-adapter.notifyDataSetChanged();
-        break;
-    case R.id.info_iv_search:
-        String msg = searchEt.getText().toString().trim();    //获取输入的信息
-        if(TextUtils.isEmpty(msg)){
-            Toast.makeText(this,"输入内容不能为空",Toast.LENGTH_SHORT).show();
-            return;
-        }
+    switch (v.getId()){
+        case R.id.info_iv_flush://刷新点击
+            searchEt.setText("");
+            mDatas.clear();
+            mDatas.addAll(allWordList);
+            adapter.notifyDataSetChanged();
+            break;
+        case R.id.info_iv_search:
+            String msg = searchEt.getText().toString().trim();    //获取输入的信息
+            if(TextUtils.isEmpty(msg)){
+                Toast.makeText(this,"输入内容不能为空",Toast.LENGTH_SHORT).show();
+                return;
+            }
         //查看输入内容是否在list当中存在，如果存在，就加到一个新的集合里
         List<WordBean>list = new ArrayList<>();
         for(int i = 0; i < allWordList.size(); i++){
@@ -106,6 +107,6 @@ adapter.notifyDataSetChanged();
             adapter.notifyDataSetChanged();   //提示适配器更新
         }
         break;
-}
+    }
     }
 }

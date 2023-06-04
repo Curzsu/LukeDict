@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         et_username = findViewById(R.id.et_username);
-      ImageView imageView = findViewById(R.id.arrowicon);
+        ImageView imageView = findViewById(R.id.arrowicon);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

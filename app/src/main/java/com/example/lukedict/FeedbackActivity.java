@@ -30,17 +30,17 @@ import android.widget.Toast;
 import java.io.File;
 
 public class FeedbackActivity extends AppCompatActivity implements View.OnClickListener{
-RatingBar rating;
-Button sendbtn;
-Button resetbtn;
-EditText qq;
-EditText age;
-RadioButton male;
-RadioButton female;
-CheckBox feedback1;
-CheckBox feedback2;
-CheckBox feedback3;
-EditText tel;
+    RatingBar rating;
+    Button sendbtn;
+    Button resetbtn;
+    EditText qq;
+    EditText age;
+    RadioButton male;
+    RadioButton female;
+    CheckBox feedback1;
+    CheckBox feedback2;
+    CheckBox feedback3;
+    EditText tel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,13 +103,10 @@ EditText tel;
 
     @Override
     public void onClick(View v) {
-
         switch (v.getId()){
             case R.id.btn_reset:
                 resetEverything();
-
             break;
-
             case R.id.btn_send:
                 showAlert();
                 //showAlert2();
@@ -117,9 +114,7 @@ EditText tel;
         }
     }
 
-  //  private void showNotification() {
-
-
+  //  private void showNotification() {}
 
     private void resetEverything() {
         qq.setText("");
@@ -156,12 +151,10 @@ EditText tel;
 
     private void showAlert2() {
         AlertDialog.Builder alertdialogbuilder = new AlertDialog.Builder(this);
-                alertdialogbuilder.setMessage("您确认要退出程序");
-                alertdialogbuilder.setPositiveButton("确定", null);
-                alertdialogbuilder.setNeutralButton("取消", null);
-                final AlertDialog alertdialog1 = alertdialogbuilder.create();
-                alertdialog1.show();
+        alertdialogbuilder.setMessage("您确认要退出程序");
+        alertdialogbuilder.setPositiveButton("确定", null);
+        alertdialogbuilder.setNeutralButton("取消", null);
+        final AlertDialog alertdialog1 = alertdialogbuilder.create();
+        alertdialog1.show();
     }
-
-
 }

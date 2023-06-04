@@ -105,6 +105,7 @@ public class loginPage extends AppCompatActivity implements View.OnClickListener
         //3、manager.notify()
         manager.notify(NOTIFICATION_ID,n);
     }
+
     private void startView() {
         et_name = (EditText) findViewById(R.id.et_username);
         et_pwd = (EditText) findViewById(R.id.et_pwd);
@@ -119,6 +120,7 @@ public class loginPage extends AppCompatActivity implements View.OnClickListener
         clickimage.setOnClickListener(this);
         animation = AnimationUtils.loadAnimation(this,R.anim.movement);
     }
+
     @Override
     public void onClick(View v) {
             switch (v.getId()) {
@@ -164,6 +166,5 @@ public class loginPage extends AppCompatActivity implements View.OnClickListener
                         sendNotification();
                     }
             }
-
     }
 }

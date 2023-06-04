@@ -40,6 +40,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
         View view = LayoutInflater.from((parent.getContext())).inflate(R.layout.msg_item, parent, false);
         return new ViewHolder(view);
     }
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ChatActivity.Msg msg = mMsgList.get(position);
@@ -47,15 +48,17 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
         //如果是收到消息，则显示左边的消息布局，将右边的消息布局隐藏
         holder.leftlayout.setVisibility(View.VISIBLE);
         holder.rightlayout.setVisibility(View.GONE);
-        holder.leftMsg.setText(msg.getContent());}
-    else if (msg.getType() == ChatActivity.Msg.TYPE_SENT){
-    //如果是发出的消息，则显示右边的消息布局，将左边的的消息布局隐藏
+        holder.leftMsg.setText(msg.getContent());
+        }
+        else if(msg.getType() == ChatActivity.Msg.TYPE_SENT){
+        //如果是发出的消息，则显示右边的消息布局，将左边的的消息布局隐藏
         holder.rightlayout.setVisibility(View.VISIBLE);
         holder.leftlayout.setVisibility(View.GONE);
         holder.rightMsg.setText(msg.getContent());
       }
 
-}
+    }
+
     @Override
     public int getItemCount() {
         return mMsgList.size();

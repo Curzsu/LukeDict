@@ -16,11 +16,12 @@ public class Main_menu extends AppCompatActivity implements View.OnClickListener
     private ImageView block2;
     private ImageView block3;
     private ImageView block4;
-public void showToast(){
-    String message = getIntent().getStringExtra("message");
-    String age=getIntent().getStringExtra("age");
-    Toast.makeText(this,message+"，欢迎您！", Toast.LENGTH_LONG).show();
-}
+
+    public void showToast(){
+        String message = getIntent().getStringExtra("message");
+        String age=getIntent().getStringExtra("age");
+        Toast.makeText(this,message+"，欢迎您！", Toast.LENGTH_LONG).show();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

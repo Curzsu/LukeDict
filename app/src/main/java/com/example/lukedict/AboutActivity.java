@@ -20,13 +20,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AboutActivity extends AppCompatActivity implements View.OnClickListener {
-ViewPager aboutVp;
-TextView shareTv;
-TextView feedbackTv;
-LinearLayout pointLayout;
-List<View> viewList;         //ViewPager的数据源
+    ViewPager aboutVp;
+    TextView shareTv;
+    TextView feedbackTv;
+    LinearLayout pointLayout;
+    List<View> viewList;         //ViewPager的数据源
     private AboutAdapter adpter;
-    
+
     int[] picIds={
             R.mipmap.i1,R.mipmap.i2,R.mipmap.i3,R.mipmap.i4,R.mipmap.i5 };
     Handler handler = new Handler(){
@@ -58,7 +58,7 @@ List<View> viewList;         //ViewPager的数据源
         shareTv.setOnClickListener(this);
         viewList = new ArrayList<>();
         showactionbar();
-//初始化ViewPager页面信息
+        //初始化ViewPager页面信息
         for (int i = 0; i < picIds.length; i++) {
                 View view = LayoutInflater.from(this).inflate(R.layout.item_abouttv,null);
             ImageView iv = view.findViewById(R.id.item_aboutvp_iv);
