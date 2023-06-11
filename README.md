@@ -4,7 +4,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Curzsu/LukeDict?style=flat-square)
 ![AUR license](https://img.shields.io/aur/license/android-studio)
 
-这是我的第一个个人项目，做了将近两个月(个人水平有限_(:з」∠)_)
+这是我的第一个个人项目，做了一个月左右(个人水平有限_(:з」∠)_)
 
 这个项目是我学校的Android课布置的期末作业。
 
