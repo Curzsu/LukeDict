@@ -26,3 +26,8 @@ https://www.jianshu.com/p/3b27628add88
 另：科学上网可以解决绝大部分异常情况。  (˶ᵔ ᵕ ᵔ˶)
 
 项目介绍：[http://t.csdn.cn/eqADP](http://t.csdnimg.cn/QAOZe)http://t.csdnimg.cn/QAOZe
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Curzsu/LukeDict&type=Timeline)](https://star-history.com/#Curzsu/LukeDict&Timeline)
+
