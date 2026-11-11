@@ -12,7 +12,6 @@
 /captures
 .externalNativeBuild
 .cxx
-local.properties
 
 # JVM fatal error logs
 hs_err_pid*.log
